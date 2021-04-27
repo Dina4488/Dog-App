@@ -1,0 +1,9 @@
+@fontface {
+    font-family: 'Lobster', cursive;;
+    src: local('Lobster') , url('https://fonts.googleapis.com/css2?family=Lobster&display=swap')
+  }
+
+
+.p-home .container{
+    font-family: 'Lobster', cursive;   
+}

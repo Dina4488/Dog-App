@@ -1,8 +1,7 @@
 class DogModel {
     
-    constructor(dogName, img) {      
+    constructor(dogName) {      
         this.dogName = dogName;
-        this.img = img;
     }    
 }
 
