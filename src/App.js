@@ -5,6 +5,7 @@ import DogsPage from './pages/DogsPage/DogsPage';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 import NavBar from './component/NavBar/NavBar';
+import DogDetailsPage from './pages/DogDetailsPage/DogDetailsPage';
 
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
           <Switch>
             <Route exact path="/"><HomePage/></Route>
             <Route exact path="/breeds"><DogsPage/></Route>
-            {/* <Route exact path="/breeds/:index"><CarDetailsPage cars={cars}/></Route> */}
+            <Route exact path="/breeds/:index"><DogDetailsPage/></Route>
             <Route path="/"><NotFoundPage/></Route>
           </Switch>
       </HashRouter>
