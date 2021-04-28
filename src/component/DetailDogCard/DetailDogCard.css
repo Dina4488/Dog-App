@@ -1,0 +1,4 @@
+.class-card-detail > a > .card-img-top {
+    object-fit: cover;
+    height: 150px;
+}
