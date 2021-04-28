@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Dog-App/static/css/main.2e7333c3.chunk.css",
+    "main.js": "/Dog-App/static/js/main.9211ed96.chunk.js",
+    "main.js.map": "/Dog-App/static/js/main.9211ed96.chunk.js.map",
+    "runtime-main.js": "/Dog-App/static/js/runtime-main.2b738cfa.js",
+    "runtime-main.js.map": "/Dog-App/static/js/runtime-main.2b738cfa.js.map",
+    "static/css/2.4c97ca4f.chunk.css": "/Dog-App/static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.0f3e8b78.chunk.js": "/Dog-App/static/js/2.0f3e8b78.chunk.js",
+    "static/js/2.0f3e8b78.chunk.js.map": "/Dog-App/static/js/2.0f3e8b78.chunk.js.map",
+    "static/js/3.9679c703.chunk.js": "/Dog-App/static/js/3.9679c703.chunk.js",
+    "static/js/3.9679c703.chunk.js.map": "/Dog-App/static/js/3.9679c703.chunk.js.map",
+    "index.html": "/Dog-App/index.html",
+    "static/css/2.4c97ca4f.chunk.css.map": "/Dog-App/static/css/2.4c97ca4f.chunk.css.map",
+    "static/css/main.2e7333c3.chunk.css.map": "/Dog-App/static/css/main.2e7333c3.chunk.css.map",
+    "static/js/2.0f3e8b78.chunk.js.LICENSE.txt": "/Dog-App/static/js/2.0f3e8b78.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2b738cfa.js",
+    "static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.0f3e8b78.chunk.js",
+    "static/css/main.2e7333c3.chunk.css",
+    "static/js/main.9211ed96.chunk.js"
+  ]
+}
