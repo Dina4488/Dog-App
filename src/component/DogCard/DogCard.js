@@ -4,12 +4,12 @@ import { Card, Col } from 'react-bootstrap';
 import { Redirect } from 'react-router';
 import './DogCard.css';
 
-function DogCard({dog}) {
+function DogCard({dog ,updateImg}) {
     
     const [img, setImg] = useState("https://www.bil-jac.com/Images/DogPlaceholder.svg");
 
     const [redirectTo, setRedirectTo] = useState();
-
+    
 
     useEffect( () => {
         const dogPhotoUrl= "https://dog.ceo/api/breed/" + dog.dogName + "/images/random";
@@ -18,6 +18,13 @@ function DogCard({dog}) {
         });
         } , [] );
 
+    useEffect( () => {
+        const dogPhotoUrl= "https://dog.ceo/api/breed/" + dog.dogName + "/images/random";
+        axios.get(dogPhotoUrl).then( response => {                               
+            setImg(response.data.message);
+        });
+        } , [updateImg] );
+    
         if(redirectTo){
             return <Redirect to={'/breeds/'+ redirectTo}/>
         }

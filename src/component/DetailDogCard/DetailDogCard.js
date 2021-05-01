@@ -4,8 +4,7 @@ import { Card, Col } from 'react-bootstrap';
 import './DetailDogCard.css'
 
 function DetailDogCard({dog}) {
-    console.log(dog);
-
+    
     return (       
         <Col xs={12} md={6} lg={3}>              
             <Card className="class-card-detail">

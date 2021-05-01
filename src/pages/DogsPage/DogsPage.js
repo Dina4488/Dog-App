@@ -1,32 +1,26 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Button, Container, Form, FormControl, Row, Spinner } from 'react-bootstrap';
+import {  Container, Form, FormControl, Row, Spinner } from 'react-bootstrap';
 import DogModel from '../../model/DogModel';
 import DogCard from '../../component/DogCard/DogCard';
 import './DogsPage.css';
-import { Link, Redirect } from 'react-router-dom';
 
 function DogsPage(props) {
     const [dogs, setDogs] = useState([]);
     const [filterText, setFilterText] = useState("");
-    const [redirectTo, setRedirectTo] = useState(false);
-
-    
+    const [updateImg, setUpdateImg] = useState(false);
+        
     useEffect(() => {        
         axios.get("https://dog.ceo/api/breeds/list/all").then(res => {
             setDogs(Object.keys(res.data.message).map((name, index) => new DogModel(index,name)));
         });
     }, []);
-        
+
     let dogsFiltered = "";
     if (dogs)  {
         dogsFiltered = dogs.filter( (dog) => dog.dogName.toLowerCase().includes(filterText.toLowerCase()) );
     }    
   
-    // if(redirectTo){
-    //     return <Redirect to={"/breeds"}/>
-    // }
-
     return (
         <div className="p-dogs">
         <Container className="class-container">
@@ -38,14 +32,13 @@ function DogsPage(props) {
                             placeholder="Filter by a dogs name"
                             />
                     </div>
-                    <div className="col-lg-4 col-md-8 col-12 ">                    
-                        <Link className="btn btn-secondary" to="/breeds/">Update images</Link>
-                        {/* <div className="btn btn-primary" onChange={()=> setRedirectTo(!redirectTo)}>Enter</div> */}
+                    <div className="col-lg-4 col-md-8 col-12 ">                       
+                        <div className="btn btn-secondary" onClick={()=> setUpdateImg(!updateImg)}>Update Images</div>
                     </div>                          
                 </Form>        
              <Row>
                 { dogs ?                 
-                       dogsFiltered.map(dog => <DogCard dog={dog}/>)
+                       dogsFiltered.map(dog => <DogCard dog={dog} updateImg={updateImg}/>)
                        :
                     <Spinner animation="border"/>   
                 }               

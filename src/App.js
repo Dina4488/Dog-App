@@ -17,7 +17,7 @@ function App() {
             <Route exact path="/"><HomePage/></Route>
             <Route exact path="/breeds"><DogsPage/></Route>
             <Route exact path="/breeds/:index"><DogDetailsPage/></Route>
-            <Route path="/"><NotFoundPage/></Route>
+            <Route path="/"><NotFoundPage/></Route>            
           </Switch>
       </HashRouter>
     </div>

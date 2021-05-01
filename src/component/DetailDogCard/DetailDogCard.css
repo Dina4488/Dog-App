@@ -2,3 +2,7 @@
     object-fit: cover;
     height: 150px;
 }
+
+.class-card-detail {
+    margin: 10px;
+}
